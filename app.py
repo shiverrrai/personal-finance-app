@@ -189,8 +189,8 @@ savings = st.sidebar.number_input("Savings ($)", 0, 5_000_000, 150_000)
 mu_savings = st.sidebar.slider("Savings Projected Return (%)", 0.0, 5.0, 2.0) / 100
 
 liquid_assets = {
-    "Equities": {"value": equities, "mu": mu_equities, "sigma": 0.18},
-    "Savings": {"value": savings, "mu": mu_savings, "sigma": 0.06},
+    "Equities": {"value": equities, "mu": mu_equities, "sigma": 0.05},
+    "Savings": {"value": savings, "mu": mu_savings, "sigma": 0.005},
 }
 
 # --------------------
@@ -211,7 +211,7 @@ for i in range(num_props):
     real_estate_props.append({
         "value": value,
         "mu": 0.03,
-        "sigma": 0.10,
+        "sigma": 0.05,
         "mortgage_balance": mortgage,
         "annual_payment": payment,
         "years_remaining": years_left
